@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Component A" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Enter Message" value={inputValue} onchange={handleInputChange}></lightning-input>
+            <lightning-button label="Send Message" onclick={handleSendMessage}></lightning-button>
+        </div>
+        <div class="slds-p-around_medium">
+            <p>Message from Component B: {messageFromB}</p>
+        </div>
+    </lightning-card>
+</template>
