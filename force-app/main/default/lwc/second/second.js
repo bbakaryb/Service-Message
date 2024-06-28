@@ -19,7 +19,7 @@ export default class Second extends LightningElement {
 
     handleSendMessage() {
         const message = {
-            message: this.inputValue
+            messageFromB: this.inputValue // Publie sur messageFromB
         };
         publish(this.messageContext, SERVICE_MESSAGE_CHANNEL, message);
     }
@@ -33,6 +33,6 @@ export default class Second extends LightningElement {
     }
 
     handleMessage(message) {
-        this.messageFromA = message.message || 'No message received';
+        this.messageFromA = message.messageFromA || 'No message received from A';
     }
 }
